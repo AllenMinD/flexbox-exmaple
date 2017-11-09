@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox 应用（让低栏永远出现在页面底部）</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+    }
+    .Site {
+      display: flex;
+      min-height: 100vh;  /* 设置body最小高度为当前视口的高度 */
+      flex-direction: column;
+    }
+
+    .Site-content {
+      flex: 1;  /* 主轴有剩余空间时，中间部分总是放大 */
+    }
+
+    header,
+    footer {
+      text-align: center;
+      background-color: #aaa;
+    }
+
+    main {
+      text-align: center;
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body class="Site">
+  <header>header</header>
+  <main class="Site-content">content</main>
+  <footer>footer</footer>
+</body>
+</html>

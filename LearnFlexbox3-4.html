@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox 应用（悬挂式布局）</title>
+  <style>
+    .Media {
+      display: flex;
+      align-items: flex-start;
+      border: 1px solid #aaa;
+      width: 500px;
+      height: 200px;
+    }
+
+    .Media-figure {
+      margin: 1em;
+      width: 100px;
+      height: 100px;
+    }
+    
+    .Media-body {
+      flex: 1;
+      word-break: break-word;  /* p标签自动换行 */
+      padding-right: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="Media">
+    <img class="Media-figure" src="https://avatars1.githubusercontent.com/u/15014595?s=460&v=4" alt="头像">
+    <p class="Media-body">blablablahblablablahblablablahblablablahblablablahblablablahblablablahblablablahblablablahblablablahblablablahblablablah</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox 应用(骰子)</title>
+  <style>
+    .container {
+      display: flex;
+    }
+
+    .box {
+      margin: 10px;
+      padding: 20px;
+      width: 100px;
+      height: 100px;
+      background-color: black;
+      border-radius: 10px;
+      /* flexbox */
+      display: flex;
+    }
+
+    .item {
+      width: 20px;
+      height: 20px;
+      background-color: white;
+      border-radius: 100%;
+    }    
+
+    /* 骰子1 */
+    .box1 {
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 骰子2 */
+    .box2 {
+      justify-content: space-between;
+    }
+    .box2 .item:nth-child(2) {
+      align-self: flex-end;
+    }
+
+    /* 骰子3 */
+    .box3 {
+      justify-content: space-between;
+    }
+    .box3 .item:nth-child(2) {
+      align-self: center;
+    }
+    .box3 .item:nth-child(3) {
+      align-self: flex-end;
+    }
+
+    /* 骰子4 和 骰子6 */
+    .box4,
+    .box6 {
+      justify-content: space-between;
+    }
+    .box4 .column,
+    .box6 .column {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* 骰子5 */
+    .box5 {
+      justify-content: space-between;
+    }
+    .box5 .column {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .box5 .column:nth-child(2) {
+      justify-content: center;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+<div class="box box1">
+    <span class="item"></span>
+  </div>
+
+  <div class="box box2">
+    <span class="item"></span>
+    <span class="item"></span>
+  </div>
+
+  <div class="box box3">
+    <span class="item"></span>
+    <span class="item"></span>
+    <span class="item"></span>
+  </div>    
+
+  <div class="box box4">
+    <div class="column">
+      <span class="item"></span>
+      <span class="item"></span>      
+    </div>
+    <div class="column">
+      <span class="item"></span>
+      <span class="item"></span>    
+    </div>
+  </div>
+
+  <div class="box box5">
+    <div class="column">
+      <span class="item"></span>
+      <span class="item"></span>      
+    </div>
+    <div class="column">
+      <span class="item"></span>
+    </div>
+    <div class="column">
+      <span class="item"></span>
+      <span class="item"></span>    
+    </div>
+  </div>
+
+  <div class="box box6">
+    <div class="column">
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>      
+    </div>
+    <div class="column">
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>    
+    </div>
+  </div>    
+  </div>
+       
+</body>
+</html>
